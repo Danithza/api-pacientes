@@ -4,6 +4,8 @@ const PacientesController = () => import('#controllers/pacientes_controller')
 const BeneficiariosController = () => import('#controllers/beneficiarios_controller')
 const CitasController = () => import('#controllers/citas_controller')
 const FacturasController = () => import('#controllers/facturas_controller')
+const ResultadosExamenesController = () => import('#controllers/resultados_examenes_controller')
+const PagosController = () => import('#controllers/pagos_controller')
 
 router
   .group(() => {
@@ -41,6 +43,19 @@ router
       router.post('/', [FacturasController, 'store'])
       router.put('/:id', [FacturasController, 'update'])
     }).prefix('facturas')
+
+    // Resultados de Exámenes
+    router.group(() => {
+      router.get('/', [ResultadosExamenesController, 'index'])
+      router.get('/:id', [ResultadosExamenesController, 'show'])
+      router.post('/', [ResultadosExamenesController, 'store'])
+    }).prefix('examenes')
+
+    // Pagos
+    router.group(() => {
+      router.get('/', [PagosController, 'index'])
+      router.post('/', [PagosController, 'store'])
+    }).prefix('pagos')
 
   })
   .prefix('/api/v1')

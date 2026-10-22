@@ -23,6 +23,11 @@ export type ScannedRoutes = {
     'facturas.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'facturas.store': { paramsTuple?: []; params?: {} }
     'facturas.update': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'resultados_examenes.index': { paramsTuple?: []; params?: {} }
+    'resultados_examenes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'resultados_examenes.store': { paramsTuple?: []; params?: {} }
+    'pagos.index': { paramsTuple?: []; params?: {} }
+    'pagos.store': { paramsTuple?: []; params?: {} }
   }
   GET: {
     'pacientes.index': { paramsTuple?: []; params?: {} }
@@ -33,6 +38,9 @@ export type ScannedRoutes = {
     'citas.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'facturas.index': { paramsTuple?: []; params?: {} }
     'facturas.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'resultados_examenes.index': { paramsTuple?: []; params?: {} }
+    'resultados_examenes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'pagos.index': { paramsTuple?: []; params?: {} }
   }
   HEAD: {
     'pacientes.index': { paramsTuple?: []; params?: {} }
@@ -43,12 +51,17 @@ export type ScannedRoutes = {
     'citas.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'facturas.index': { paramsTuple?: []; params?: {} }
     'facturas.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'resultados_examenes.index': { paramsTuple?: []; params?: {} }
+    'resultados_examenes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'pagos.index': { paramsTuple?: []; params?: {} }
   }
   POST: {
     'pacientes.store': { paramsTuple?: []; params?: {} }
     'beneficiarios.store': { paramsTuple?: []; params?: {} }
     'citas.store': { paramsTuple?: []; params?: {} }
     'facturas.store': { paramsTuple?: []; params?: {} }
+    'resultados_examenes.store': { paramsTuple?: []; params?: {} }
+    'pagos.store': { paramsTuple?: []; params?: {} }
   }
   PUT: {
     'pacientes.update': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
