@@ -28,6 +28,18 @@ export type ScannedRoutes = {
     'resultados_examenes.store': { paramsTuple?: []; params?: {} }
     'pagos.index': { paramsTuple?: []; params?: {} }
     'pagos.store': { paramsTuple?: []; params?: {} }
+    'documentos_medicos.index': { paramsTuple?: []; params?: {} }
+    'documentos_medicos.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'documentos_medicos.store': { paramsTuple?: []; params?: {} }
+    'examenes.index': { paramsTuple?: []; params?: {} }
+    'examenes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'examenes.store': { paramsTuple?: []; params?: {} }
+    'notificaciones.index': { paramsTuple?: []; params?: {} }
+    'notificaciones.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'notificaciones.store': { paramsTuple?: []; params?: {} }
+    'solicitudes.index': { paramsTuple?: []; params?: {} }
+    'solicitudes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'solicitudes.store': { paramsTuple?: []; params?: {} }
   }
   GET: {
     'pacientes.index': { paramsTuple?: []; params?: {} }
@@ -41,6 +53,14 @@ export type ScannedRoutes = {
     'resultados_examenes.index': { paramsTuple?: []; params?: {} }
     'resultados_examenes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'pagos.index': { paramsTuple?: []; params?: {} }
+    'documentos_medicos.index': { paramsTuple?: []; params?: {} }
+    'documentos_medicos.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'examenes.index': { paramsTuple?: []; params?: {} }
+    'examenes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'notificaciones.index': { paramsTuple?: []; params?: {} }
+    'notificaciones.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'solicitudes.index': { paramsTuple?: []; params?: {} }
+    'solicitudes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
   HEAD: {
     'pacientes.index': { paramsTuple?: []; params?: {} }
@@ -54,6 +74,14 @@ export type ScannedRoutes = {
     'resultados_examenes.index': { paramsTuple?: []; params?: {} }
     'resultados_examenes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
     'pagos.index': { paramsTuple?: []; params?: {} }
+    'documentos_medicos.index': { paramsTuple?: []; params?: {} }
+    'documentos_medicos.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'examenes.index': { paramsTuple?: []; params?: {} }
+    'examenes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'notificaciones.index': { paramsTuple?: []; params?: {} }
+    'notificaciones.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
+    'solicitudes.index': { paramsTuple?: []; params?: {} }
+    'solicitudes.show': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
   }
   POST: {
     'pacientes.store': { paramsTuple?: []; params?: {} }
@@ -62,6 +90,10 @@ export type ScannedRoutes = {
     'facturas.store': { paramsTuple?: []; params?: {} }
     'resultados_examenes.store': { paramsTuple?: []; params?: {} }
     'pagos.store': { paramsTuple?: []; params?: {} }
+    'documentos_medicos.store': { paramsTuple?: []; params?: {} }
+    'examenes.store': { paramsTuple?: []; params?: {} }
+    'notificaciones.store': { paramsTuple?: []; params?: {} }
+    'solicitudes.store': { paramsTuple?: []; params?: {} }
   }
   PUT: {
     'pacientes.update': { paramsTuple: [ParamValue]; params: {'id': ParamValue} }
