@@ -5,6 +5,16 @@
 
 export const controllers = {
   AccessTokens: () => import('#controllers/access_tokens_controller'),
+  Beneficiarios: () => import('#controllers/beneficiarios_controller'),
+  Citas: () => import('#controllers/citas_controller'),
+  DocumentosMedicos: () => import('#controllers/documentos_medicos_controller'),
+  Examenes: () => import('#controllers/examenes_controller'),
+  Facturas: () => import('#controllers/facturas_controller'),
   NewAccount: () => import('#controllers/new_account_controller'),
+  Notificaciones: () => import('#controllers/notificaciones_controller'),
+  Pacientes: () => import('#controllers/pacientes_controller'),
+  Pagos: () => import('#controllers/pagos_controller'),
   Profile: () => import('#controllers/profile_controller'),
+  ResultadosExamenes: () => import('#controllers/resultados_examenes_controller'),
+  Solicitudes: () => import('#controllers/solicitudes_controller'),
 }
