@@ -1,16 +1,8 @@
-/*
-|--------------------------------------------------------------------------
-| Routes file
-|--------------------------------------------------------------------------
-|
-| The routes file is used for defining the HTTP routes.
-|
-*/
-
 import { middleware } from '#start/kernel'
 import router from '@adonisjs/core/services/router'
 import { controllers } from '#generated/controllers'
-import db from '@adonisjs/lucid/services/db'
+
+const PacientesController = () => import('#controllers/pacientes_controller')
 
 router.get('/', () => {
   return { hello: 'world' }
@@ -37,43 +29,14 @@ router
       .as('profile')
       .use(middleware.auth())
 
-    // Rutas del Módulo Pacientes (Conexión a MySQL AWS bajo /api/v1/pacientes)
+    // Rutas del Módulo Pacientes (Usando PacientesController)
     router
       .group(() => {
-        router
-          .get('/', async () => {
-            try {
-              const pacientes = await db.from('usuarios_pacientes').select('*').limit(10)
-              return {
-                status: 'success',
-                data: pacientes,
-              }
-            } catch (error: any) {
-              return {
-                status: 'error',
-                message: error.message,
-              }
-            }
-          })
-          .as('index')
+        router.get('/', [PacientesController, 'index']).as('index')
+        router.get('/:id', [PacientesController, 'show']).as('show')
+        router.post('/', [PacientesController, 'store']).as('store')
       })
       .prefix('pacientes')
       .as('pacientes')
   })
   .prefix('/api/v1')
-
-// Ruta directa /pacientes (Sin prefijo api/v1)
-router.get('/pacientes', async () => {
-  try {
-    const pacientes = await db.from('usuarios_pacientes').select('*').limit(10)
-    return {
-      status: 'success',
-      data: pacientes,
-    }
-  } catch (error: any) {
-    return {
-      status: 'error',
-      message: error.message,
-    }
-  }
-})

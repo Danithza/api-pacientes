@@ -8,11 +8,11 @@
     "./data": "./.adonisjs/client/data.d.ts",
     "./registry": "./.adonisjs/client/registry/index.ts"
   },
-"scripts": {
-  "start": "node build/bin/server.js",
-  "build": "node ace build",
-  "dev": "tsx --watch bin/server.js"
-},
+  "scripts": {
+    "start": "node build/bin/server.js",
+    "build": "node ace build",
+    "dev": "tsx --watch bin/server.js"
+  },
   "imports": {
     "#controllers/*": "./app/controllers/*.js",
     "#exceptions/*": "./app/exceptions/*.js",
@@ -64,6 +64,7 @@
     "@vinejs/vine": "^4.4.0",
     "better-sqlite3": "^13.0.3",
     "luxon": "^3.7.2",
+    "mysql2": "^3.24.6",
     "reflect-metadata": "^0.2.2"
   },
   "hotHook": {
